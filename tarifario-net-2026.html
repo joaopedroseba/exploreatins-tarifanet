@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tarifário Net 2026 · Explore Atins</title>
+  <meta name="description" content="Tarifário net Explore Atins 2026. Valores para agências, pousadas e parceiros. Passeios e transfers de lancha nos Lençóis Maranhenses a partir de Atins."/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@200;300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --sand-pale:   #f5efe4;
+      --sand-warm:   #e8d9be;
+      --sand-mid:    #c9ae88;
+      --dune:        #a08560;
+      --dune-dark:   #6b5538;
+      --water-light: #a8d8e0;
+      --water-mid:   #5aafca;
+      --water-deep:  #1e6b82;
+      --sky-deep:    #0e3d52;
+      --ink:         #1a1108;
+      --muted:       #8a7560;
+      --white:       #fdfaf6;
+      --line:        rgba(107, 85, 56, 0.18);
+    }
+
+    html, body {
+      font-family: 'Jost', sans-serif;
+      background: var(--sand-pale);
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.5;
+    }
+
+    .page {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 56px 40px 80px;
+    }
+
+    /* HEADER */
+    .header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: end;
+      gap: 32px;
+      padding-bottom: 28px;
+      border-bottom: 2px solid var(--dune-dark);
+      margin-bottom: 40px;
+    }
+    .brand-mark {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--water-deep);
+      margin-bottom: 6px;
+    }
+    .brand-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-style: italic;
+      font-size: clamp(38px, 5vw, 56px);
+      line-height: 1.05;
+      color: var(--sky-deep);
+      letter-spacing: -0.5px;
+    }
+    .brand-subtitle {
+      font-size: 14px;
+      color: var(--muted);
+      margin-top: 10px;
+      max-width: 60ch;
+    }
+    .header-meta {
+      text-align: right;
+      font-size: 12px;
+      color: var(--dune-dark);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .header-meta strong {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 20px;
+      letter-spacing: 0.04em;
+      color: var(--sky-deep);
+      margin-top: 4px;
+    }
+    .header-meta .badge {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 4px 10px;
+      background: var(--water-deep);
+      color: var(--white);
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      border-radius: 2px;
+    }
+
+    /* INTRO */
+    .intro {
+      background: var(--white);
+      border-left: 3px solid var(--water-mid);
+      padding: 18px 22px;
+      font-size: 14px;
+      color: var(--dune-dark);
+      margin-bottom: 36px;
+      line-height: 1.6;
+    }
+    .intro strong { color: var(--sky-deep); font-weight: 500; }
+
+    /* SECTION */
+    .section {
+      margin-bottom: 32px;
+      page-break-inside: avoid;
+    }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 22px;
+      color: var(--sky-deep);
+      letter-spacing: 0.02em;
+      margin-bottom: 14px;
+      padding-left: 12px;
+      border-left: 3px solid var(--dune);
+    }
+
+    /* TABLES */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--white);
+      font-size: 14px;
+      border: 1px solid var(--line);
+    }
+    thead th {
+      background: var(--dune-dark);
+      color: var(--white);
+      font-weight: 500;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 12px 14px;
+      text-align: left;
+      border-right: 1px solid rgba(255,255,255,0.12);
+    }
+    thead th:last-child { border-right: none; }
+    thead th.num { text-align: right; }
+
+    tbody td {
+      padding: 12px 14px;
+      border-top: 1px solid var(--line);
+      border-right: 1px solid var(--line);
+      vertical-align: middle;
+    }
+    tbody td:last-child { border-right: none; }
+    tbody tr:nth-child(even) td { background: rgba(232, 217, 190, 0.18); }
+
+    .service { font-weight: 500; color: var(--sky-deep); }
+    .price { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+    .price.zero { color: var(--muted); font-style: italic; font-size: 12px; }
+    .price strong { font-weight: 600; color: var(--dune-dark); }
+
+    /* CATEGORY ACCENTS */
+    .section.tradicionais .section-title { border-left-color: var(--water-mid); }
+    .section.exclusivos .section-title { border-left-color: var(--dune); }
+    .section.experiencias .section-title { border-left-color: var(--water-deep); }
+    .section.transfer-lancha .section-title { border-left-color: var(--sand-mid); }
+
+    /* OBSERVATIONS */
+    .obs {
+      margin-top: 48px;
+      padding: 22px 26px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-top: 3px solid var(--water-deep);
+    }
+    .obs h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--sky-deep);
+      margin-bottom: 12px;
+    }
+    .obs ul { padding-left: 18px; font-size: 13px; color: var(--dune-dark); line-height: 1.7; }
+    .obs li { margin-bottom: 4px; }
+
+    /* FOOTER */
+    .footer {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .footer .contact strong { color: var(--sky-deep); font-weight: 500; display: block; margin-bottom: 4px; font-size: 13px; }
+    .footer .right { text-align: right; }
+    @media (max-width: 760px) {
+      .footer { grid-template-columns: 1fr; }
+      .footer .right { text-align: left; }
+      .page { padding: 32px 18px 60px; }
+      .header { grid-template-columns: 1fr; }
+      .header-meta { text-align: left; }
+    }
+
+    /* PRINT */
+    @media print {
+      body { background: white; }
+      .page { padding: 20px; max-width: 100%; }
+      .section { page-break-inside: avoid; }
+      tbody tr:nth-child(even) td { background: #f5efe4 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      thead th { background: #6b5538 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <header class="header">
+      <div>
+        <div class="brand-mark">Explore Atins</div>
+        <h1 class="brand-title">Tarifário Net</h1>
+        <p class="brand-subtitle">Valores para agências, pousadas e parceiros. Passeios e transfers de lancha nos Lençóis Maranhenses operados a partir de Atins.</p>
+      </div>
+      <div class="header-meta">
+        Vigência
+        <strong>2026</strong>
+        <span class="badge">Confidencial</span>
+      </div>
+    </header>
+
+    <div class="intro">
+      Grade comercial Explore Atins 2026. Valores líquidos (net), exclusivos para parceiros credenciados, não devem ser repassados ao cliente final. Reservas, disponibilidade e condições especiais para grupos acima de 9 passageiros devem ser confirmadas diretamente com a operação. <strong>Política de pagamento, cancelamento e bloqueios sazonais nas observações ao final.</strong>
+    </div>
+
+    <!-- TRADICIONAIS -->
+    <section class="section tradicionais">
+      <h2 class="section-title">Passeios Tradicionais</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Passeio</th>
+            <th class="num">Coletivo (por pax)</th>
+            <th class="num">Privativo 1 a 4 pax</th>
+            <th class="num">Privativo 6 a 9 pax</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="service">Canto de Atins (meio período)</td>
+            <td class="price">R$ <strong>150,00</strong></td>
+            <td class="price">R$ <strong>800,00</strong></td>
+            <td class="price">R$ <strong>1.000,00</strong></td>
+          </tr>
+          <tr>
+            <td class="service">Ponta do Mangue (meio período)</td>
+            <td class="price">R$ <strong>150,00</strong></td>
+            <td class="price">R$ <strong>800,00</strong></td>
+            <td class="price">R$ <strong>1.000,00</strong></td>
+          </tr>
+          <tr>
+            <td class="service">Lençóis Maranhenses (dia todo)</td>
+            <td class="price">R$ <strong>280,00</strong></td>
+            <td class="price">R$ <strong>1.300,00</strong></td>
+            <td class="price">R$ <strong>1.450,00</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- EXCLUSIVOS QUADRICICLO -->
+    <section class="section exclusivos">
+      <h2 class="section-title">Exclusivos · Quadriciclo</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Roteiro</th>
+            <th class="num">02 pessoas</th>
+            <th class="num">04 pessoas</th>
+            <th class="num">6 a 9 pessoas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="service">Grandes Lençóis (meio período)</td>
+            <td class="price">R$ <strong>900,00</strong></td>
+            <td class="price">R$ <strong>1.400,00</strong></td>
+            <td class="price">R$ <strong>2.200,00</strong></td>
+          </tr>
+          <tr>
+            <td class="service">Pequenos Lençóis (dia todo)</td>
+            <td class="price">R$ <strong>1.600,00</strong></td>
+            <td class="price">R$ <strong>1.400,00</strong></td>
+            <td class="price">R$ <strong>2.200,00</strong></td>
+          </tr>
+          <tr>
+            <td class="service">Grandes Lençóis (dia todo)</td>
+            <td class="price">R$ <strong>1.500,00</strong></td>
+            <td class="price">R$ <strong>1.400,00</strong></td>
+            <td class="price">R$ <strong>2.200,00</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- EXPERIENCIAS NASCER DO SOL E PLANCTON -->
+    <section class="section experiencias">
+      <h2 class="section-title">Experiências · Nascer do Sol e Plâncton</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Experiência</th>
+            <th class="num">Privativo 1 a 4 pax</th>
+            <th class="num">Privativo 6 a 9 pax</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="service">Nascer do sol (sem café da manhã)</td>
+            <td class="price">R$ <strong>800,00</strong></td>
+            <td class="price">R$ <strong>1.000,00</strong></td>
+          </tr>
+          <tr>
+            <td class="service">Plâncton bioluminescente</td>
+            <td class="price">R$ <strong>800,00</strong></td>
+            <td class="price">R$ <strong>1.000,00</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- TRANSFER LANCHA -->
+    <section class="section transfer-lancha">
+      <h2 class="section-title">Transfer de Lancha</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Trecho</th>
+            <th class="num">Privativo 2 a 4 pax</th>
+            <th class="num">Privativo 6 a 9 pax</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="service">Atins / Barreirinhas</td>
+            <td class="price">R$ <strong>850,00</strong></td>
+            <td class="price">R$ <strong>1.400,00</strong></td>
+          </tr>
+          <tr>
+            <td class="service">Atins / Caburé</td>
+            <td class="price">R$ <strong>700,00</strong></td>
+            <td class="price zero">a combinar</td>
+          </tr>
+          <tr>
+            <td class="service">Atins / Vassouras</td>
+            <td class="price">R$ <strong>750,00</strong></td>
+            <td class="price zero">a combinar</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- OBSERVACOES -->
+    <div class="obs">
+      <h3>Condições Comerciais</h3>
+      <ul>
+        <li>Valores em Reais (BRL), líquidos, válidos para 2026 e exclusivos para parceiros credenciados.</li>
+        <li>Comissionamento e política de markup para venda ao cliente final ficam a critério de cada parceiro.</li>
+        <li>Reservas confirmadas mediante disponibilidade da operação. Solicitações em alta temporada com antecedência mínima de 7 dias.</li>
+        <li>Grupos acima de 9 passageiros, eventos privativos e roteiros customizados têm valores calculados sob consulta.</li>
+        <li>Política de cancelamento, ajuste por sazonalidade e bloqueios de feriado serão informados na cotação.</li>
+        <li>Crianças, cortesias e condições especiais devem ser combinadas no ato da reserva.</li>
+      </ul>
+    </div>
+
+    <footer class="footer">
+      <div class="contact">
+        <strong>Explore Atins · Operação Lençóis Maranhenses</strong>
+        Atins, Barreirinhas e Santo Amaro · Maranhão<br/>
+        reservas@exploreatins.com · WhatsApp comercial<br/>
+        exploreatins.com
+      </div>
+      <div class="right">
+        Tarifário Net 2026<br/>
+        Documento de uso interno · Não distribuir ao cliente final<br/>
+        Última atualização: maio de 2026
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
