@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tarifário Net 2026 · Explore Atins</title>
-  <meta name="description" content="Tarifário net Explore Atins 2026. Valores para agências, pousadas e parceiros. Passeios e transfers de lancha nos Lençóis Maranhenses a partir de Atins."/>
+  <meta name="description" content="Tarifário net Explore Atins 2026. Valores para agências, pousadas e parceiros. Passeios, lagoas, transfers de lancha, aulas e aluguéis nos Lençóis Maranhenses a partir de Atins."/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@200;300;400;500;600&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -127,6 +127,12 @@
       padding-left: 12px;
       border-left: 3px solid var(--dune);
     }
+    .section-note {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 8px;
+      font-style: italic;
+    }
 
     /* TABLES */
     table {
@@ -160,15 +166,19 @@
     tbody tr:nth-child(even) td { background: rgba(232, 217, 190, 0.18); }
 
     .service { font-weight: 500; color: var(--sky-deep); }
+    .service small { display: block; font-weight: 400; font-size: 11px; color: var(--muted); margin-top: 2px; letter-spacing: 0.04em; }
     .price { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
     .price.zero { color: var(--muted); font-style: italic; font-size: 12px; }
     .price strong { font-weight: 600; color: var(--dune-dark); }
 
     /* CATEGORY ACCENTS */
     .section.tradicionais .section-title { border-left-color: var(--water-mid); }
+    .section.revoada .section-title { border-left-color: var(--water-deep); }
+    .section.lagoas .section-title { border-left-color: var(--water-light); }
     .section.exclusivos .section-title { border-left-color: var(--dune); }
     .section.experiencias .section-title { border-left-color: var(--water-deep); }
     .section.transfer-lancha .section-title { border-left-color: var(--sand-mid); }
+    .section.aulas .section-title { border-left-color: var(--dune-dark); }
 
     /* OBSERVATIONS */
     .obs {
@@ -226,7 +236,7 @@
       <div>
         <div class="brand-mark">Explore Atins</div>
         <h1 class="brand-title">Tarifário Net</h1>
-        <p class="brand-subtitle">Valores para agências, pousadas e parceiros. Passeios e transfers de lancha nos Lençóis Maranhenses operados a partir de Atins.</p>
+        <p class="brand-subtitle">Valores para agências, pousadas e parceiros. Passeios, lagoas, transfers de lancha, aulas e aluguéis nos Lençóis Maranhenses operados a partir de Atins.</p>
       </div>
       <div class="header-meta">
         Vigência
@@ -236,7 +246,7 @@
     </header>
 
     <div class="intro">
-      Grade comercial Explore Atins 2026. Valores líquidos (net), exclusivos para parceiros credenciados, não devem ser repassados ao cliente final. Reservas, disponibilidade e condições especiais para grupos acima de 9 passageiros devem ser confirmadas diretamente com a operação. <strong>Política de pagamento, cancelamento e bloqueios sazonais nas observações ao final.</strong>
+      Grade comercial Explore Atins 2026. Valores líquidos (net), exclusivos para parceiros credenciados, não devem ser repassados ao cliente final. Operação privativa com <strong>capacidade máxima de 8 passageiros por veículo ou lancha</strong>. Solicitações em alta temporada devem ser feitas com antecedência mínima de 7 dias. Política de pagamento, cancelamento e bloqueios sazonais nas observações ao final.
     </div>
 
     <!-- TRADICIONAIS -->
@@ -248,7 +258,7 @@
             <th>Passeio</th>
             <th class="num">Coletivo (por pax)</th>
             <th class="num">Privativo 1 a 4 pax</th>
-            <th class="num">Privativo 6 a 9 pax</th>
+            <th class="num">Privativo 5 a 8 pax</th>
           </tr>
         </thead>
         <tbody>
@@ -274,6 +284,79 @@
       </table>
     </section>
 
+    <!-- REVOADA DOS GUARAS -->
+    <section class="section revoada">
+      <h2 class="section-title">Revoada dos Guarás</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Modalidade</th>
+            <th class="num">Privativo 2 pax</th>
+            <th class="num">Privativo 3 a 4 pax</th>
+            <th class="num">6 pax ou mais</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="service">Revoada dos Guarás (privativo)</td>
+            <td class="price">R$ <strong>250,00</strong></td>
+            <td class="price">R$ <strong>500,00</strong></td>
+            <td class="price zero">a combinar</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="section-note">Valores por grupo privativo, não por pessoa.</p>
+    </section>
+
+    <!-- LAGOAS -->
+    <section class="section lagoas">
+      <h2 class="section-title">Lagoas</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Roteiro</th>
+            <th class="num">Meio período</th>
+            <th class="num">Dia inteiro</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="service">
+              Lagoa da Pininga
+              <small>Passeio guiado</small>
+            </td>
+            <td class="price">R$ <strong>1.000,00</strong></td>
+            <td class="price">R$ <strong>1.500,00</strong></td>
+          </tr>
+          <tr>
+            <td class="service">
+              Lagoa da Pininga
+              <small>Sessão de kitesurf</small>
+            </td>
+            <td class="price">R$ <strong>1.000,00</strong></td>
+            <td class="price">R$ <strong>1.400,00</strong></td>
+          </tr>
+          <tr>
+            <td class="service">
+              Lagoa Bonita + Lagoa Azul
+              <small>Passeio dia inteiro · até 8 pax</small>
+            </td>
+            <td class="price zero">—</td>
+            <td class="price">R$ <strong>1.500,00</strong></td>
+          </tr>
+          <tr>
+            <td class="service">
+              Lagoa Bonita + Lagoa Azul
+              <small>Nascer do sol · até 8 pax</small>
+            </td>
+            <td class="price">R$ <strong>800,00</strong></td>
+            <td class="price zero">—</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="section-note">Valor net por grupo privativo. Confirmar tamanho de grupo na cotação.</p>
+    </section>
+
     <!-- EXCLUSIVOS QUADRICICLO -->
     <section class="section exclusivos">
       <h2 class="section-title">Exclusivos · Quadriciclo</h2>
@@ -283,7 +366,7 @@
             <th>Roteiro</th>
             <th class="num">02 pessoas</th>
             <th class="num">04 pessoas</th>
-            <th class="num">6 a 9 pessoas</th>
+            <th class="num">5 a 8 pessoas</th>
           </tr>
         </thead>
         <tbody>
@@ -317,7 +400,7 @@
           <tr>
             <th>Experiência</th>
             <th class="num">Privativo 1 a 4 pax</th>
-            <th class="num">Privativo 6 a 9 pax</th>
+            <th class="num">Privativo 5 a 8 pax</th>
           </tr>
         </thead>
         <tbody>
@@ -343,7 +426,7 @@
           <tr>
             <th>Trecho</th>
             <th class="num">Privativo 2 a 4 pax</th>
-            <th class="num">Privativo 6 a 9 pax</th>
+            <th class="num">Privativo 5 a 8 pax</th>
           </tr>
         </thead>
         <tbody>
@@ -366,14 +449,65 @@
       </table>
     </section>
 
+    <!-- AULAS, ALUGUEIS E EXPERIENCIAS AQUATICAS -->
+    <section class="section aulas">
+      <h2 class="section-title">Aulas, Aluguéis e Experiências Aquáticas</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Serviço</th>
+            <th class="num">Valor net</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="service">
+              Aula de Kitesurf
+              <small>Curso completo · 10 horas</small>
+            </td>
+            <td class="price">R$ <strong>3.600,00</strong></td>
+          </tr>
+          <tr>
+            <td class="service">
+              Aula Avulsa de Kitesurf
+              <small>Sessão individual</small>
+            </td>
+            <td class="price">R$ <strong>400,00</strong></td>
+          </tr>
+          <tr>
+            <td class="service">
+              Aluguel de Quadriciclo
+              <small>Diária</small>
+            </td>
+            <td class="price">R$ <strong>650,00</strong></td>
+          </tr>
+          <tr>
+            <td class="service">
+              Quadriciclo · Saída Noturna
+              <small>Valor por veículo</small>
+            </td>
+            <td class="price">R$ <strong>850,00</strong></td>
+          </tr>
+          <tr>
+            <td class="service">
+              Igarapaddle
+              <small>Stand-up paddle guiado · por pessoa</small>
+            </td>
+            <td class="price">R$ <strong>250,00</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
     <!-- OBSERVACOES -->
     <div class="obs">
       <h3>Condições Comerciais</h3>
       <ul>
         <li>Valores em Reais (BRL), líquidos, válidos para 2026 e exclusivos para parceiros credenciados.</li>
+        <li>Capacidade máxima de 8 passageiros por veículo ou lancha. Grupos maiores devem ser cotados sob consulta.</li>
         <li>Comissionamento e política de markup para venda ao cliente final ficam a critério de cada parceiro.</li>
         <li>Reservas confirmadas mediante disponibilidade da operação. Solicitações em alta temporada com antecedência mínima de 7 dias.</li>
-        <li>Grupos acima de 9 passageiros, eventos privativos e roteiros customizados têm valores calculados sob consulta.</li>
+        <li>Aulas de kitesurf incluem material e instrutor credenciado. Aluguel de quadriciclo sujeito a apresentação de habilitação válida.</li>
         <li>Política de cancelamento, ajuste por sazonalidade e bloqueios de feriado serão informados na cotação.</li>
         <li>Crianças, cortesias e condições especiais devem ser combinadas no ato da reserva.</li>
       </ul>
